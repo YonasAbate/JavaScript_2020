@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Digital Watches</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .card , .card-body{
+            border-radius: 10px;
+            box-shadow: 0 0 15px black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="m-3 bg-dark">
+        <a href="#">JS Digital Watches</a>
+    </nav>
+
+    <!-- Digital Watches -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body bg-success text-white text-center">
+                    <h5>Asia/Kolkata</h5>
+                    <h4 class="display-4">India</h4>
+                    <p id="india-date">09/13/2020</p>
+                    <h1 id="india-time" class="display-4">10:00:00 PM</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body bg-primary text-white text-center">
+                    <h5>America/New_York</h5>
+                    <h4 class="display-4">USA</h4>
+                    <p id="usa-date">09/13/2020</p>
+                    <h1 id="usa-time" class="display-4">10:00:00 PM</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body bg-danger text-white text-center">
+                    <h5>Asia/Shanghai</h5>
+                    <h4 class="display-4">China</h4>
+                    <p id="china-date">09/13/2020</p>
+                    <h1 id="china-time" class="display-4">10:00:00 PM</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="01_script.js"></script>
+</body>
+</html>

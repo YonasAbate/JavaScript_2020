@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS SMS App </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark mb-3">
+        <a href="#" class="navbar-brand">JS SMS App</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3>SMS App</h3>
+                    </div>
+                    <div class="card-body bg-light">
+                        <form>
+                            <div class="form-group">
+                                <textarea maxlength="100" id="text-area" rows="4" class="form-control" placeholder="Your Text Hear"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                      <div class="card-footer bg-secondary text-white">
+                      <h3>The Characters Remaining : <span class="font-weight-bold text-danger" id="char-count">0</span>/100</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="01_script.js"></script>
+</body>
+
+</html>

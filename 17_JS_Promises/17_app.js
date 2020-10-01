@@ -1,0 +1,113 @@
+// Promises concept with callback
+let doTask = (success, failure) => {
+    // doing the task
+    let isDone = true; // or False
+    if (isDone) {
+        success('Task is Done');
+    }
+    else {
+        failure('Task is Not Done');
+    }
+};
+doTask((message) => {
+    console.log(message);
+}, (message) => {
+    console.error(message);
+
+});
+
+
+
+// Actual Promise Creation 
+let cleanCamera = new Promise((resolve, reject) => {
+    // cleaning camera
+    let isDone = true;
+    if (isDone) {
+        resolve('Cleaning is Done');
+    }
+    else {
+        reject('Cleaning is Not Done');
+    }
+});
+cleanCamera.then((message) => {
+    console.log(message);
+}).catch((err) => {
+    console.error(err);
+});
+
+
+
+// Dependent Promises in Javascript
+let buildProject = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let isDone = true;
+        if (isDone) {
+            resolve('Project is Finished');
+        }
+        else {
+            reject('Project is Not Finished');
+        }
+    }, 1000);
+});
+
+let attendTechnicalRound = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let isDone = true;
+        if (isDone) {
+            resolve('Technical Round is Finished');
+        }
+        else {
+            reject('Technical Round is Not Finished');
+        }
+    }, 3000);
+});
+
+let attendManagerRound = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let isDone = true;
+        if (isDone) {
+            resolve('Manager Round is Finished');
+        }
+        else {
+            reject('Manager Round is Not Finished');
+        }
+    }, 5000);
+});
+
+let attendHrRound = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let isDone = true;
+        if (isDone) {
+            resolve('HR Round is Finished,  You Got Job!!!');
+        }
+        else {
+            reject('HR Round is Not Finished');
+        }
+    }, 6000);
+});
+
+buildProject.then((message) => {
+    let result = `${message} -> `;
+    console.log(message);
+    attendTechnicalRound.then((message) => {
+        result += `${message} -> `;
+        console.log(message);
+        attendManagerRound.then((message) => {
+            result += `${message} -> `;
+            console.log(message);
+            attendHrRound.then((message) => {
+                result += `${message} `;
+                console.log(message);
+                // console.log(result);
+            }).catch((err) => {
+                console.error(err);
+            });
+        }).catch((err) => {
+            console.error(err);
+        });
+    }).catch((err) => {
+        console.error(err);
+    });
+}).catch((err) => {
+    console.error(err);
+});

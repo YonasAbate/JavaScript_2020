@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+              integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="../bootstrap/css/font-awesome-5.6.3.css">
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../bootstrap/css/mdb.css">
+        <title>JQuery Calculator</title>
+        <style>
+            .bg-secondary {
+                background: linear-gradient(45deg, black, purple);
+            }
+
+            .card,
+            .card-body {
+                border-radius: 10px;
+                box-shadow: 0 0 2px lightcoral;
+            }
+
+            .badge-secondary {
+                background: linear-gradient(45deg, black, purple);
+            }
+
+            .text-secondary {
+                color: #4d004d !important;
+
+            }
+        </style>
+    </head>
+
+<body>
+    <nav>
+        <div class="row">
+            <div class="col">
+                <div class="card-header bg-dark">
+                    <a class="text-white font-weight-bold" href="#">JS Math Table</a>
+                </div>
+            </div>
+    </nav>
+    <!-- Math Table -->
+  <div class="container mt-2">
+      <div class="row">
+          <div class="col">
+              <div class="card">
+                  <div class="card-header bg-secondary text-white">
+                   <h3>Math Table</h3>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Enter a Number</label>
+                                    <input id="req-number" type="number" class="form-control" placeholder="Your Number">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="multiplier">Select The Multiplier</label>
+                                    <input type="range" class="custom-range" id="multiplier" min="1" max="10" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- Result Section -->
+  <div class="container mt-2">
+  <div class="row">
+      <div class="col">
+      <div class="card">
+          <div class="card-body bg-light">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <h1 class="display-2">
+                        <span class="badge badge-secondary" id="number">1</span>
+                    </h1>
+                </div>
+                <div class="col-md-2">
+                    <h1>
+                        <i class="fa fa-times fa-2 text-secondary"></i>
+                    </h1>
+                </div>
+                <div class="col-md-2">
+                    <h1 class="display-2">
+                        <span class="badge badge-secondary" id="multi">1</span>
+                    </h1>
+                </div>
+                <div class="col-md-2">
+                    <h1>
+                        <i class="fa fa-equals fa-2 text-secondary"></i>
+                    </h1>
+                </div>
+                <div class="col-md-2">
+                    <h1 class="display-2">
+                        <span class="badge badge-secondary" id="result">20</span>
+                    </h1>
+                </div>
+             </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  </div>
+    <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/mdb.js"></script>
+    <script src="01_script.js"></script>
+</body>
+
+</html>
